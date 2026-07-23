@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 18:55:39 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/23 18:57:07 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/23 19:11:05 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,11 +37,11 @@
 # define FALSE 0
 # endif
 
-typedef struct s_data
-{
-	char	grid[6][6];
+// typedef struct s_data
+// {
+// 	char	grid[6][6];
 
-} t_data;
+// } t_data;
 
 
 #endif

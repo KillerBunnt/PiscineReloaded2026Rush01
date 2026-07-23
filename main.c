@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 18:55:41 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/23 19:11:48 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/23 19:19:06 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 int	main(int argc, char **argv)
 {
-	char grid[6][6];
+	int grid[6][6];
 
-	parsing(argc, argv, &grid);
+	parsing(argc, argv, grid);
 	return (0);
 }

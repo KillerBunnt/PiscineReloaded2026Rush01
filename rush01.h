@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 18:55:39 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/23 19:33:35 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/23 19:34:22 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,8 @@
 # define RIGHT_COL 4
 
 # define MAX_HEIGHT 4
-// typedef struct s_data
-// {
-// 	char	grid[6][6];
 
-// } t_data;
+# define DEBUG_FLAG 1
 
 int	parsing(int argc, char **argv, char grid[6][6]);
 

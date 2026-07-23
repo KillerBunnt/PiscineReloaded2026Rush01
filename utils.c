@@ -6,11 +6,11 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 19:09:44 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/23 19:13:46 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/23 19:33:17 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "rush01.h"
 
 void	print_error(void)
 {

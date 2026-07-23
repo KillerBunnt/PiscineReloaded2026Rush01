@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 18:55:39 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/23 19:34:22 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/23 19:36:37 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,5 +27,6 @@
 int	parsing(int argc, char **argv, char grid[6][6]);
 
 void	print_error(void);
+void	ft_putchar(char c)
 
 #endif

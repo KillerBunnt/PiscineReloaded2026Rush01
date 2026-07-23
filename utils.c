@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 19:09:44 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/23 19:33:17 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/23 19:36:32 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,9 @@
 void	print_error(void)
 {
 	write(1, "Error\n", 6);
+}
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
 }

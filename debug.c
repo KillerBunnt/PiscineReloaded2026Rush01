@@ -1,34 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rush01.h                                           :+:      :+:    :+:   */
+/*   debug.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/07/23 18:55:39 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/23 19:37:55 by joloo            ###   ########.fr       */
+/*   Created: 2026/07/23 19:32:50 by joloo             #+#    #+#             */
+/*   Updated: 2026/07/23 19:53:06 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RUSH01_H
- #define RUSH01_H
+#include "rush01.h"
 
-#include <unistd.h>
+void	debug_grid(int grid[6][6])
+{
+	int	y;
+	int	x;
 
-# define TOP_ROW 1
-# define BOT_ROW 4
-# define LEFT_COL 1
-# define RIGHT_COL 4
-
-# define MAX_HEIGHT 4
-
-# define DEBUG_FLAG 1
-
-void	debug_grid(int grid[6][6]);
-
-int	parsing(int argc, char **argv, int grid[6][6]);
-
-void	print_error(void);
-void	ft_putchar(char c);
-
-#endif
+	y = 0;
+	x = 0;
+	while (y < 6)
+	{
+		x = 0;
+		while (x < 6)
+		{
+			if (grid[y][x] == 0)
+				ft_putchar(' ');
+			else
+				ft_putchar(grid[y][x] + '0');
+			x++;
+		}
+		ft_putchar('\n');
+		y++;
+	}
+}

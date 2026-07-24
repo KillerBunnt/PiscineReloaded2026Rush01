@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 18:55:41 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/24 17:16:01 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/24 17:18:37 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	print_grid(int grid[6][6])
 	y = 0;
 	while (x < 6)
 	{
-		ft_putchar(grid[y][x] + '0');
+		ft_putchar(grid[x][y] + '0');
 		ft_putchar(',');
 		ft_putchar(' ');
 		y++;

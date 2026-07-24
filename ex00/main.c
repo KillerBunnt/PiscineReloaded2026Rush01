@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 18:55:41 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/24 17:07:22 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/24 17:11:47 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static void	print_grid(int grid[6][6])
 
 int	main(int argc, char **argv)
 {
-	int grid[6][6] = {0};
+	int grid[6][6];
 
 	if (parsing(argc, argv[1], grid) == -1)
 		return (1);

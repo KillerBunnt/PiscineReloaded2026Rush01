@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 19:06:38 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/24 17:03:11 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/24 17:14:30 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,24 @@ static int	check_valid_input(char *input)
 		i+= 2;
 	}
 	return (0);
+}
+
+static void	fill_grid_with_zero(int grid[6][6])
+{
+	int	y;
+	int	x;
+
+	y = 0;
+	while (y < 6)
+	{
+		x = 0;
+		while (x < 6)
+		{
+			grid[y][x] = 0;
+			x++;
+		}
+		y++;
+	}
 }
 
 static void	fill_grid(char *input, int grid[6][6])
@@ -71,6 +89,7 @@ int	parsing(int argc, char *input, int grid[6][6])
 	}
 	if (check_valid_input(input) == -1)
 		return (-1);
+	fill_grid_with_zero(grid);
 	fill_grid(input, grid);
 	return (0);
 }

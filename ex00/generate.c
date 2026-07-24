@@ -33,29 +33,29 @@ int	generate_solution(int xpos, int ypos, int size, int grid[6][6])
 }
 //12345
 //12345 12345 12345 12345 12345
-#include <stdio.h>
-int main(int argc, char **argv)
-{
-	int grid[6][6] = {0};
-	parsing(argc, argv, grid);
-	generate_solution(1, 1, 4, grid);
-	//start test
-	// printf("testing for: val-%d, x-%d, y-%d\n", grid[xpos][ypos], xpos, ypos);
-	int x = 0;
-	int y = 0;
-	while (x < 6)
-	{
-		printf("%d, ", grid[x][y]);
-		y++;
-		if (y >= 6)
-		{
-			printf("\n");
-			y = 0;
-			x++;
-		}
-	}
-	//end test
-}
+// #include <stdio.h>
+// int main(int argc, char **argv)
+// {
+// 	int grid[6][6] = {0};
+// 	parsing(argc, argv, grid);
+// 	generate_solution(1, 1, 4, grid);
+// 	//start test
+// 	// printf("testing for: val-%d, x-%d, y-%d\n", grid[xpos][ypos], xpos, ypos);
+// 	int x = 0;
+// 	int y = 0;
+// 	while (x < 6)
+// 	{
+// 		printf("%d, ", grid[x][y]);
+// 		y++;
+// 		if (y >= 6)
+// 		{
+// 			printf("\n");
+// 			y = 0;
+// 			x++;
+// 		}
+// 	}
+// 	//end test
+// }
 // //start test
 // 	printf("testing for: val-%d, x-%d, y-%d\n", grid[xpos][ypos], xpos, ypos);
 // 	int x = 0;

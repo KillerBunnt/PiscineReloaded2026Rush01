@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 18:55:39 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/24 15:06:53 by sonfong          ###   ########.fr       */
+/*   Updated: 2026/07/24 16:44:56 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ int	is_invalid(int grid[6][6], int row, int col, int num);
 
 void	print_error(void);
 void	ft_putchar(char c);
+int	ft_strlen(char *str);
 
 #endif

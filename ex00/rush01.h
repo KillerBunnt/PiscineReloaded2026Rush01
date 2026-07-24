@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 18:55:39 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/24 16:44:56 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/24 16:47:09 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 
 void	debug_grid(int grid[6][6]);
 
-int	parsing(int argc, char **argv, int grid[6][6]);
+int	parsing(int argc, char *input, int grid[6][6]);
 int	generate_solution(int xpos, int ypos, int val, int grid[6][6]);
 
 int     count_visible_row_left(int row, int grid[6][6]);

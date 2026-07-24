@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 19:06:38 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/24 17:14:30 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/24 17:15:57 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static int	check_valid_input(char *input)
 			print_error("Non numeric input\n");
 			return (-1);
 		}
-		i+= 2;
+		i += 2;
 	}
 	return (0);
 }

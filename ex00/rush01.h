@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 18:55:39 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/24 16:47:09 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/24 16:57:58 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int     count_visible_col_top(int col, int grid[6][6]);
 int     count_visible_col_btm(int col, int grid[6][6]);
 int	is_invalid(int grid[6][6], int row, int col, int num);
 
-void	print_error(void);
+void	print_error(char *str);
 void	ft_putchar(char c);
 int	ft_strlen(char *str);
 

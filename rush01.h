@@ -27,6 +27,7 @@
 void	debug_grid(int grid[6][6]);
 
 int	parsing(int argc, char **argv, int grid[6][6]);
+int	generate_solution(int xpos, int ypos, int val, int grid[6][6]);
 
 void	print_error(void);
 void	ft_putchar(char c);

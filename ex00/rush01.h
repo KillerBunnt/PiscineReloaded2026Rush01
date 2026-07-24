@@ -6,14 +6,14 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 18:55:39 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/24 16:47:09 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/24 16:58:43 by thdexmun         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef RUSH01_H
- #define RUSH01_H
+# define RUSH01_H
 
-#include <unistd.h>
+# include <unistd.h>
 
 # define TOP_ROW 1
 # define BOT_ROW 4
@@ -25,15 +25,13 @@
 # define DEBUG_FLAG 1
 
 void	debug_grid(int grid[6][6]);
-
-int	parsing(int argc, char *input, int grid[6][6]);
-int	generate_solution(int xpos, int ypos, int val, int grid[6][6]);
-
-int     count_visible_row_left(int row, int grid[6][6]);
-int     count_visible_row_right(int row, int grid[6][6]);
-int     count_visible_col_top(int col, int grid[6][6]);
-int     count_visible_col_btm(int col, int grid[6][6]);
-int	is_invalid(int grid[6][6], int row, int col, int num);
+int		parsing(int argc, char *input, int grid[6][6]);
+int		generate_solution(int xpos, int ypos, int val, int grid[6][6]);
+int		count_visible_row_left(int row, int grid[6][6]);
+int		count_visible_row_right(int row, int grid[6][6]);
+int		count_visible_col_top(int col, int grid[6][6]);
+int		count_visible_col_btm(int col, int grid[6][6]);
+int		is_invalid(int grid[6][6], int row, int col, int num);
 
 void	print_error(void);
 void	ft_putchar(char c);

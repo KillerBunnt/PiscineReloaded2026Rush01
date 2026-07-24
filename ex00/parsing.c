@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 19:06:38 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/24 16:46:53 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/24 16:51:32 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,23 +24,23 @@ static void fill_grid(char *input, int grid[6][6])
 	int	i;
 
 	i = 0;
-	while (i < 16)
+	while (i < MAX_HEIGHT * 4)
 	{
-		if (i < 4)
+		if (i < MAX_HEIGHT * 1)
 		{
-			grid[0][LEFT_COL + i] = input[i * 2] - '0';
+			grid[TOP_ROW - 1][LEFT_COL + (i % MAX_HEIGHT)] = input[i * 2] - '0';
 		}
-		else if (i < 8)
+		else if (i < MAX_HEIGHT * 2)
 		{
-			grid[5][LEFT_COL + i - 4] = input[i * 2]- '0';
+			grid[BOT_ROW + 1][LEFT_COL + (i % MAX_HEIGHT)] = input[i * 2]- '0';
 		}
-		else if (i < 12)
+		else if (i < MAX_HEIGHT * 3)
 		{
-			grid[TOP_ROW + i - 8][0] = input[i * 2]- '0';
+			grid[TOP_ROW + (i % MAX_HEIGHT)][LEFT_COL - 1] = input[i * 2]- '0';
 		}
 		else
 		{
-			grid[TOP_ROW + i - 12][5] = input[i * 2]- '0';
+			grid[TOP_ROW + (i % MAX_HEIGHT)][RIGHT_COL + 1] = input[i * 2]- '0';
 		}
 		i++;
 	}

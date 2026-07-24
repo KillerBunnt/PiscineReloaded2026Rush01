@@ -1,10 +1,19 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   generate.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: thdexmun <thdexmun@student.42kl.edu.m      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/07/24 17:07:44 by thdexmun          #+#    #+#             */
+/*   Updated: 2026/07/24 17:12:47 by thdexmun         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "rush01.h"
-#include <stdio.h>
 
 int	generate_solution(int xpos, int ypos, int size, int grid[6][6])
 {
-	// int	valid;
-
 	while (grid[1][1] < size)
 	{
 		if (++(grid[xpos][ypos]) > size)
@@ -31,44 +40,26 @@ int	generate_solution(int xpos, int ypos, int size, int grid[6][6])
 	}
 	return (1);
 }
-//12345
-//12345 12345 12345 12345 12345
-// #include <stdio.h>
-// int main(int argc, char **argv)
-// {
-// 	int grid[6][6] = {0};
-// 	parsing(argc, argv, grid);
-// 	generate_solution(1, 1, 4, grid);
-// 	//start test
-// 	// printf("testing for: val-%d, x-%d, y-%d\n", grid[xpos][ypos], xpos, ypos);
-// 	int x = 0;
-// 	int y = 0;
-// 	while (x < 6)
-// 	{
-// 		printf("%d, ", grid[x][y]);
-// 		y++;
-// 		if (y >= 6)
-// 		{
-// 			printf("\n");
-// 			y = 0;
-// 			x++;
-// 		}
-// 	}
-// 	//end test
-// }
-// //start test
-// 	printf("testing for: val-%d, x-%d, y-%d\n", grid[xpos][ypos], xpos, ypos);
-// 	int x = 0;
-// 	int y = 0;
-// 	while (x < 6)
-// 	{
-// 		printf("%d, ", grid[x][y]);
-// 		y++;
-// 		if (y >= 6)
-// 		{
-// 			printf("\n");
-// 			y = 0;
-// 			x++;
-// 		}
-// 	}
-// //end test
+//#include <stdio.h>
+//int main(int argc, char **argv)
+//{
+//	int grid[6][6] = {0};
+//	parsing(argc, argv, grid);
+//	generate_solution(1, 1, 4, grid);
+////start test
+//// printf("testing for: val-%d, x-%d, y-%d\n", grid[xpos][ypos], xpos, ypos);
+//	int x = 0;
+//	int y = 0;
+//	while (x < 6)
+//	{
+//		printf("%d, ", grid[x][y]);
+//		y++;
+//		if (y >= 6)
+//		{
+//			printf("\n");
+//			y = 0;
+//			x++;
+//		}
+//	}
+////end test
+//}

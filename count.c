@@ -6,7 +6,7 @@
 /*   By: sonfong <sonfong@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 07:21:11 by sonfong           #+#    #+#             */
-/*   Updated: 2026/07/24 08:43:58 by sonfong          ###   ########.fr       */
+/*   Updated: 2026/07/24 14:54:32 by sonfong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ int	count_visible_row_right(int row, int grid[6][6])
 	count = 0;
 	while (x >= LEFT_COL)
 	{
-		if (grid[row][x])
+		if (grid[row][x] > max)
 		{
 			count++;
 			max = grid[row][x];
@@ -54,18 +54,18 @@ int	count_visible_row_right(int row, int grid[6][6])
 	return (count);
 }
 
-int	count_visible_col_top(int row, int grid[6][6])
+int	count_visible_col_top(int col, int grid[6][6])
 {
 	int	y;
 	int	max;
 	int	count;
 
-	y = BOT_ROW;
+	y = TOP_ROW;
 	max = 0;
 	count = 0;
-	while (y <= TOP_ROW)
+	while (y <= BOT_ROW)
 	{
-		if (grid[row][x])
+		if (grid[y][col] > max)
 		{
 			count++;
 			max = grid[y][col];
@@ -75,18 +75,18 @@ int	count_visible_col_top(int row, int grid[6][6])
 	return (count);
 }
 
-int	count_visible_col_btm(int row, int grid[6][6])
+int	count_visible_col_btm(int col, int grid[6][6])
 {
 	int	y;
 	int	max;
 	int	count;
 
-	y = TOP_ROW;
+	y = BOT_ROW;
 	max = 0;
 	count = 0;
-	while (y >= BOT_ROW)
+	while (y >= TOP_ROW)
 	{
-		if (grid[y][col])
+		if (grid[y][col] > max)
 		{
 			count++;
 			max = grid[y][col];

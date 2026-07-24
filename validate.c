@@ -6,7 +6,7 @@
 /*   By: sonfong <sonfong@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/24 07:58:05 by sonfong           #+#    #+#             */
-/*   Updated: 2026/07/24 13:47:22 by sonfong          ###   ########.fr       */
+/*   Updated: 2026/07/24 14:57:57 by sonfong          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	check_row(int row, int grid[6][6])
 	{
 		if (count_visible_row_left(row, grid) != grid[row][0])
 			return (1);
-		if (count_visible_row_left(row, grid) != grid[row][0])
+		if (count_visible_row_right(row, grid) != grid[row][5])
 			return (1);
 	}
 	return (0);
@@ -42,7 +42,7 @@ int	check_col(int col, int grid[6][6])
 
 	y = TOP_ROW;
 	filled = 1;
-	while (y <= TOP_ROW)
+	while (y <= BOT_ROW)
 	{
 		if (grid[y][col] == 0)
 			filled = 0;
@@ -52,13 +52,13 @@ int	check_col(int col, int grid[6][6])
 	{
 		if (count_visible_col_top(col, grid) != grid[0][col])
 			return (1);
-		if (count_visible_col_down(col, grid) != grid[0][col])
+		if (count_visible_col_btm(col, grid) != grid[5][col])
 			return (1);
 	}
 	return (0);
 }
 
-int	check_double_row(int grid[6][6], int row, int num)
+int	check_double_row(int grid[6][6], int row, int col, int num)
 {
 	int	x;
 
@@ -72,7 +72,7 @@ int	check_double_row(int grid[6][6], int row, int num)
 	return (0);
 }
 
-int	check_double_col(int grid[6][6], int col, int num)
+int	check_double_col(int grid[6][6], int row, int col, int num)
 {
 	int	y;
 
@@ -81,21 +81,21 @@ int	check_double_col(int grid[6][6], int col, int num)
 	{
 		if (y != row && grid[y][col] == num)
 			return (1);
-		y++:
+		y++;
 	}
 	return (0);
 }
 
 int	is_invalid(int grid[6][6], int row, int col, int num)
 {
-	if (check_double_row(grid row, col, num) == 1)
+	if (check_double_row(grid, row, col, num) == 1)
 		return (1);
 	if (check_double_col(grid, row, col, num) == 1)
 		return (1);
 	if (check_row(row, grid) == 1)
 		return (1);
 	if (check_col(col, grid) == 1)
-		return(1);
+		return (1);
 	else
 		return (0);
 }

@@ -31,7 +31,7 @@ int	generate_solution(int xpos, int ypos, int size, int grid[6][6])
 			if (ypos < 1)
 			{
 				xpos--;
-				ypos = 1;
+				ypos = size;
 			}
 			if (xpos < 1)
 				xpos++;
@@ -44,9 +44,9 @@ int	generate_solution(int xpos, int ypos, int size, int grid[6][6])
 				xpos++;
 				ypos = 1;
 			}
+			if (grid[size][size])
+				return (0);
 		}
-		else if (grid[size][size])
-			return (0);
 	}
 	return (1);
 }

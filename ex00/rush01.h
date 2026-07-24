@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 18:55:39 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/24 17:06:23 by thdexmun         ###   ########.fr       */
+/*   Updated: 2026/07/24 17:08:37 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 # define MAX_HEIGHT 4
 
-# define DEBUG_FLAG 1
+# define DEBUG_FLAG 0
 
 void	debug_grid(int grid[6][6]);
 int		parsing(int argc, char *input, int grid[6][6]);

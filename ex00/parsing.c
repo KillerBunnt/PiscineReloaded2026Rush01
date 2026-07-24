@@ -6,7 +6,7 @@
 /*   By: joloo <joloo@student.42kl.edu.my>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/07/23 19:06:38 by joloo             #+#    #+#             */
-/*   Updated: 2026/07/24 16:51:32 by joloo            ###   ########.fr       */
+/*   Updated: 2026/07/24 16:53:26 by joloo            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 // 	return (0);
 // }
 
-static void fill_grid(char *input, int grid[6][6])
+static void	fill_grid(char *input, int grid[6][6])
 {
 	int	i;
 
@@ -32,19 +32,21 @@ static void fill_grid(char *input, int grid[6][6])
 		}
 		else if (i < MAX_HEIGHT * 2)
 		{
-			grid[BOT_ROW + 1][LEFT_COL + (i % MAX_HEIGHT)] = input[i * 2]- '0';
+			grid[BOT_ROW + 1][LEFT_COL + (i % MAX_HEIGHT)] = input[i * 2] - '0';
 		}
 		else if (i < MAX_HEIGHT * 3)
 		{
-			grid[TOP_ROW + (i % MAX_HEIGHT)][LEFT_COL - 1] = input[i * 2]- '0';
+			grid[TOP_ROW + (i % MAX_HEIGHT)][LEFT_COL - 1] = input[i * 2] - '0';
 		}
 		else
 		{
-			grid[TOP_ROW + (i % MAX_HEIGHT)][RIGHT_COL + 1] = input[i * 2]- '0';
+			grid[TOP_ROW + (i % MAX_HEIGHT)][RIGHT_COL + 1]
+				= input[i * 2] - '0';
 		}
 		i++;
 	}
 }
+
 int	parsing(int argc, char *input, int grid[6][6])
 {
 	if (argc != 2)

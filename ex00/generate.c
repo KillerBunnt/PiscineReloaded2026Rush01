@@ -7,28 +7,10 @@ int	generate_solution(int xpos, int ypos, int size, int grid[6][6])
 
 	while (grid[1][1] < size)
 	{
-		grid[xpos][ypos]++;
-		// //start test
-		printf("testing for: val-%d, x-%d, y-%d\n", grid[xpos][ypos], xpos, ypos);
-		int x = 0;
-		int y = 0;
-		while (x < 6)
-		{
-			printf("%d, ", grid[x][y]);
-			y++;
-			if (y >= 6)
-			{
-				printf("\n");
-				y = 0;
-				x++;
-			}
-		}
-		//end test
-		if (grid[xpos][ypos] > size)
+		if (++(grid[xpos][ypos]) > size)
 		{
 			grid[xpos][ypos] = 0;
-			ypos--;
-			if (ypos < 1)
+			if (--ypos < 1)
 			{
 				xpos--;
 				ypos = size;
@@ -38,8 +20,7 @@ int	generate_solution(int xpos, int ypos, int size, int grid[6][6])
 		}
 		else if (!is_invalid(grid, xpos, ypos, grid[xpos][ypos]))
 		{
-			ypos++;
-			if (ypos > size)
+			if (++ypos > size)
 			{
 				xpos++;
 				ypos = 1;
@@ -58,7 +39,22 @@ int main(int argc, char **argv)
 	int grid[6][6] = {0};
 	parsing(argc, argv, grid);
 	generate_solution(1, 1, 4, grid);
-	printf("%d", grid[0][0]);
+	//start test
+	// printf("testing for: val-%d, x-%d, y-%d\n", grid[xpos][ypos], xpos, ypos);
+	int x = 0;
+	int y = 0;
+	while (x < 6)
+	{
+		printf("%d, ", grid[x][y]);
+		y++;
+		if (y >= 6)
+		{
+			printf("\n");
+			y = 0;
+			x++;
+		}
+	}
+	//end test
 }
 // //start test
 // 	printf("testing for: val-%d, x-%d, y-%d\n", grid[xpos][ypos], xpos, ypos);
